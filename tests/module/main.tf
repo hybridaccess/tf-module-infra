@@ -7,5 +7,5 @@ module "test" {
   location               = data.azurerm_resource_group.location
   cassandra_vnet_id      = data.azurerm_virtual_network.test.id
   cassandra_subnet_id    = data.azurerm_subnet.test.id
-  cassandra_node_sku               = var.cassandra_node_sku
+  cassandra_node_sku     = var.cassandra_node_sku
 }
