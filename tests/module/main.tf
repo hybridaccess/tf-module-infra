@@ -1,6 +1,6 @@
 module "test" {
   source                 = "../../."
-  env                    = var.environment
+  environment            = var.environment
   azurerm_resource_group = data.azurerm_resource_group.name
   frontend_ip            = var.frontend_ip
   name                   = var.cassandra_cluster_name
