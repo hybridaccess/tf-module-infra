@@ -32,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          name: hybridaccess/tf-module-cassandra
+          repository: hybridaccess/tf-module-cassandra
           ref: refs/heads/master
 
       - name: terraform plan
