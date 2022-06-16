@@ -29,7 +29,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          name: hybridaccess/tf-module-cassandra
+          ref: refs/heads/master
+
       - name: terraform plan
         uses: dflook/terraform-plan@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+
