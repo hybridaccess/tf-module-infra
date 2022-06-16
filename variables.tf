@@ -67,3 +67,7 @@ variable "cassandra_enable_hybrid_cluster" {
   type        = bool
   default     = false
 }
+
+variable "azurerm_resource_group" {
+  type = string
+}
