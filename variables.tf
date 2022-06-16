@@ -53,6 +53,7 @@ variable "cassandra_enabled" {
 variable "cassandra_lb_frontend_ip" {
   description = "Static private IP address of load balancer frontend IP address"
   type        = string
+  default     = ""
 }
 
 variable "cassandra_external_seed_nodes" {
