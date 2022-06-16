@@ -41,7 +41,7 @@ variable "cassandra_subnet_id" {
 variable "cassandra_cluster_name" {
   description = "Cassandra cluster name"
   type        = string
-  default     = ""
+  default     = "cassandra-cl"
 }
 
 variable "cassandra_enabled" {
