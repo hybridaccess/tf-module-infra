@@ -1,5 +1,5 @@
 data "azurerm_resource_group" "test" {
-  name = "poc-cassandra1"
+  name = "ca"
 }
 
 data "azurerm_virtual_network" "test" {
