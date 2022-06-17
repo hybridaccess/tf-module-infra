@@ -1,11 +1,20 @@
 module "test" {
   source                 = "../../."
   environment            = var.environment
-  azurerm_resource_group = data.azurerm_resource_group.test.name
+  azurerm_resource_group = azurerm_resource_group.this.name
   frontend_ip            = var.frontend_ip
   name                   = var.cassandra_cluster_name
-  location               = data.azurerm_resource_group.test.location
-  cassandra_vnet_id      = data.azurerm_virtual_network.test.id
-  cassandra_subnet_id    = data.azurerm_subnet.test.id
+  location               = var.location
+  cassandra_vnet_id      = azurerm_virtual_network.this.id
+  cassandra_subnet_id    = azurerm_subnet.this.id
   cassandra_node_sku     = var.cassandra_node_sku
+}
+
+resource "azurerm_resource_group" "this" {
+  location = var.location
+  name     = "${var.name}-rg"
+
+  tags = {
+    dept = "IT"
+  }
 }
