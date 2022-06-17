@@ -1,12 +1,3 @@
-resource "azurerm_resource_group" "this" {
-  location = var.location
-  name     = "${var.name}-rg"
-
-  tags = {
-    dept = "IT"
-  }
-}
-
 module "cassandra" {
   source                 = "github.com/hybridaccess/tf-module-cassandra.git?ref=master"
   env                    = var.environment
